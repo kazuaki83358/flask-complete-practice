@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Marks</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+        label { display:block; margin-top: 12px; }
+        .row { display:flex; gap:12px; align-items:center; }
+        .row input[type="text"] { flex:1; }
+        .row input[type="number"] { width:120px; }
+        .subject { margin-bottom:8px; }
+        button { margin-top: 16px; padding:8px 14px; }
+    </style>
+</head>
+<body>
+    <h1>Enter Subjects and Marks</h1>
+    <p>Fill each subject name and the corresponding mark (0-100). The form will compute the average and show the result.</p>
+
+    <form method="post" action="/marks">
+        <!-- Subject 1 -->
+        <div class="subject">
+            <label>Subject 1 name (optional):</label>
+            <div class="row">
+                <input type="text" name="sub1_name" placeholder="e.g. Math">
+                <input type="number" name="math" placeholder="Marks" min="0" max="100" step="any" required>
+            </div>
+        </div>
+
+        <!-- Subject 2 -->
+        <div class="subject">
+            <label>Subject 2 name (optional):</label>
+            <div class="row">
+                <input type="text" name="sub2_name" placeholder="e.g. Science">
+                <input type="number" name="science" placeholder="Marks" min="0" max="100" step="any" required>
+            </div>
+        </div>
+
+        <!-- Subject 3 -->
+        <div class="subject">
+            <label>Subject 3 name (optional):</label>
+            <div class="row">
+                <input type="text" name="sub3_name" placeholder="e.g. English">
+                <input type="number" name="english" placeholder="Marks" min="0" max="100" step="any" required>
+            </div>
+        </div>
+
+        <!-- Subject 4 -->
+        <div class="subject">
+            <label>Subject 4 name (optional):</label>
+            <div class="row">
+                <input type="text" name="sub4_name" placeholder="e.g. Mechanical">
+                <input type="number" name="mechanical" placeholder="Marks" min="0" max="100" step="any" required>
+            </div>
+        </div>
+
+        <button type="submit">Calculate Average</button>
+    </form>
+</body>
+</html>

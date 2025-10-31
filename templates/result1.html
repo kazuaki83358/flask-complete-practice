@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Final Results
+    </h1>
+        {% for key, value in results.items() %}
+         {#  Display each key-value pair in a table row #}
+        <h1>{{ key }} </h1>
+        <h2> {{ value }} </h2>
+        {% endfor %}
+</body>
+</html>
