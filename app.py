@@ -89,4 +89,6 @@ def successres(score):
 
 
 if __name__ == "__main__":
-    app.run(debug=True) # Runs the application in debug mode for development purposes
+    # host='0.0.0.0' makes the server accessible from any device on the network
+    # port=5000 is the default port, but you can change it if needed
+    app.run(host='0.0.0.0', port=5000, debug=True)
